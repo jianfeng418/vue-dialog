@@ -64,21 +64,20 @@ export default {
       this.$kiko_confirm({
         title:'确认',
         width:'300px',
-        height:'200px'
+        height:'200px',
+        content:'this is my confirm '
       },function(){
           alert('ok')
       })
     },
     showdialog(){
 
-      this.$v_dialog({
+      var dia1 = this.$v_dialog({
           title:'创建网络',
           width:'600px',
           height:'400px',
-          multi:true,
+          multi:true,  //多步操作传true
           render:nextstep
-      },function(){
-          alert('this is ok')
       })
     }
   },

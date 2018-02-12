@@ -9,9 +9,9 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="" class="col-sm-2 control-label">描述：</label>
+				<label for="description" class="col-sm-2 control-label">描述：</label>
 				<div class="col-sm-10">
-					<textarea type="text" class="form-control" id="" style='resize:none'  placeholder="请输入描述"></textarea>
+					<textarea type="text" class="form-control" id="description"  style='resize:none'  placeholder="请输入描述"></textarea>
 				</div>
 			</div>
 		</form>
@@ -23,6 +23,11 @@ export default{
 	data(){
 		return {
 		
+		}
+	},
+	methods:{
+		complateFun(){
+			console.log('complate')
 		}
 	}
 }
