@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
     <div>
       <button class='btn btn-default' @click='showbox'>message</button>
     </div>
@@ -11,12 +10,12 @@
       <button class='btn btn-default'  @mouseout='tooltiphide($event)' @mouseenter='tooltip("top",$event)'>tooltipTop</button>
       <button class='btn btn-default'  @mouseout='tooltiphide($event)' @mouseenter='tooltip("bottom",$event)'>tooltipBottom</button>
     </div>
-    <div>
+    <div style = 'margin:15px'>
       <button class='btn btn-default'  @click='showconfirm'>confirm</button>
     </div>
 
 
-    <div>
+    <div style = 'margin:15px'>
       <button class='btn btn-default'  @click='showdialog'>dialog</button>
     </div>
   </div>
@@ -31,17 +30,15 @@ Vue.use(kiko)
 import createNet from './test.vue'
 import nextstep from './nextStep.vue'
 
-
 export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your vue-dialog App'
     }
   },
   methods:{
     showbox(){
-    
       this.$kiko_message({
         message:'this is message',
         time:5000
@@ -57,7 +54,6 @@ export default {
       })
     },
     tooltiphide($event){
-
       this.$kiko_tooltip($event)
     },
     showconfirm(){
@@ -71,20 +67,18 @@ export default {
       })
     },
     showdialog(){
-
       var dia1 = this.$v_dialog({
-          title:'创建网络',
+          title:'创建账号',
           width:'600px',
           height:'400px',
           multi:true,  //多步操作传true
-          render:nextstep
+          render:nextstep,
+          appData:[{id:'1121',type:'boy'}]
       })
     }
   },
   components:{createNet,nextstep}
-
 }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
