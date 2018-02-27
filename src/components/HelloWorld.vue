@@ -24,7 +24,7 @@
 
 <script>
 import Vue from 'vue'
-import kiko from '../../node_modules/kiko/index.js'
+import kiko from '../../node_modules/vue-dialog-jf/index.js'
 Vue.use(kiko)
 
 import createNet from './test.vue'
