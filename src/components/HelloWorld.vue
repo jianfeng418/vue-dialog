@@ -24,8 +24,8 @@
 
 <script>
 import Vue from 'vue'
-import kiko from '../../node_modules/vue-dialog-jf/index.js'
-Vue.use(kiko)
+import vDialogJf from '../../node_modules/vue-dialog-jf/index.js'
+Vue.use(vDialogJf)
 
 import createNet from './test.vue'
 import nextstep from './nextStep.vue'
@@ -39,13 +39,13 @@ export default {
   },
   methods:{
     showbox(){
-      this.$kiko_message({
+      this.$v_message({
         message:'this is message',
         time:5000
       })
     },
     tooltip(direction,$event){
-      this.$kiko_tooltip($event,{
+      this.$v_tooltip($event,{
         content:'this is tooltip',
         direction: direction,
         background: '#65f',
@@ -54,16 +54,18 @@ export default {
       })
     },
     tooltiphide($event){
-      this.$kiko_tooltip($event)
+      this.$v_tooltip($event)
     },
     showconfirm(){
-      this.$kiko_confirm({
+      this.$v_confirm({
         title:'确认',
         width:'300px',
         height:'200px',
         content:'this is my confirm '
       },function(){
-          alert('ok')
+          alert('ok');
+      },function(){
+        alert('cancel');
       })
     },
     showdialog(){

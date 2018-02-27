@@ -67,18 +67,16 @@
 					{name:'1 step1',step:'#step1',active:true},
 					{name:'2 step2',step:'#step2',active:false},
 					{name:'3 step3',step:'#step3',active:false},
-					{name:'4 step4',step:'#step4',active:false,getData:'getStepData'},
-					
+					{name:'4 step4',step:'#step4',active:false,getData:'getStepData'},	
 				])
 			},
 			popup(){
 				 var that = this;
-				 var dia2 = this.$v_dialog({
+				 var dia = this.$v_dialog({
 			          title:'创建账号',
 			          width:'400px',
 			          height:'300px',
 			          multi:false,  //多步操作传true
-			          msg:'ddsd',
 			          render:test,
 			          appData:{name:that.num,description:'good boy'},
 			          complate:function(data){
@@ -87,7 +85,6 @@
 			      });  
 			},
 			complateFun(){
-
 				this.$root.close();
 			},
 			cancelFun(){
