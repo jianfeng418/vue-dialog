@@ -21,7 +21,8 @@ module.exports = {
       new webpack.ProvidePlugin({  
         $:"jquery",  
         jQuery:"jquery",  
-        "windows.jQuery":"jquery"  
+        "windows.jQuery":"jquery",
+		Popper: ['popper.js', 'default'],		
       })  
   ],
   output: {
@@ -62,6 +63,7 @@ module.exports = {
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
       },
+      
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
         loader: 'url-loader',
