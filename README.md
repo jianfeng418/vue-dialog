@@ -15,6 +15,7 @@ this.$v_message({
         time:5000
       })
 ```
+
 <table>
     <tr>
     <td>参数名称</td>
@@ -36,7 +37,9 @@ this.$v_message({
   </tr>
   </table>
   
-### message使用方式
+  ![Image message](message.png)
+
+### confirm使用方式
 ```
 this.$v_confirm({
         title:'确认',
@@ -49,6 +52,7 @@ this.$v_confirm({
           alert('cancel');
        })
 ```
+
 <table>
   <tr>
       <td>参数名称 </td>
@@ -93,7 +97,9 @@ this.$v_confirm({
       <td>点击取消后触发的函数 </td>
     </tr>
   </table>
-#### dialog使用方式
+  
+  ![Image confirm](confirm.png)
+### dialog使用方式
 
 var dia = this.$v_dialog(options);
 
@@ -110,7 +116,7 @@ var dia = this.$v_dialog({
         },
     }); 
 ```
-### options参数
+
 <table>
   <tr>
     <td>参数名称</td>
@@ -167,7 +173,9 @@ var dia = this.$v_dialog({
     <td>弹出框点击取消时触发的函数</td>
   </tr>
  <table>
-
+   
+![Image dialog](dialog1.png)
+![Image dialog2](dialog2.png)
 ## Build Setup
 
 ``` bash
