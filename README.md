@@ -8,6 +8,8 @@ import Vue from 'vue'
 import vDialogJf from '../../node_modules/vue-dialog-jf/index.js'
 Vue.use(vDialogJf)
 ```
+- - -
+
 ### message使用方式
 ```
 this.$v_message({
@@ -38,6 +40,8 @@ this.$v_message({
   </table>
   
   ![Image message](message.png)
+  
+  - - -
 
 ### confirm使用方式
 ```
@@ -99,6 +103,7 @@ this.$v_confirm({
   </table>
   
   ![Image confirm](confirm.png)
+  - - -
 ### dialog使用方式
 
 var dia = this.$v_dialog(options);
@@ -176,6 +181,7 @@ var dia = this.$v_dialog({
    
 ![Image dialog](dialog1.png)
 ![Image dialog2](dialog2.png)
+- - -
 ## Build Setup
 
 ``` bash
